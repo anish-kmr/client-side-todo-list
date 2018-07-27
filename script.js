@@ -28,6 +28,7 @@ function sendUserInput() {
 }
 
 function checkIfValidKey(e) {
+  // keyCode 13 is the Enter key
   if (inputField.value.length > 0 && e.keyCode === 13) {
     sendUserInput();
   }

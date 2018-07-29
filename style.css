@@ -1,3 +1,22 @@
-h1, h2, p, li {
+/* Resets the margin and padding to zero so that I don't have to worry about each browsers specifications on these values. Also, I've 
+set the box-sizing to border-box, so that I don't have to do the additional math when determing height/width with margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* flexbox layout start */
+.container {
+  display: flex;
+  margin: 1% 1%;
+}
+.title-and-input, .todo-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+li {
+  margin-left: 20px;
 }

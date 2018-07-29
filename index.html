@@ -8,13 +8,21 @@
   -->
 </head>
 <body>
-  <h1>Nick's Simple JavaScript Todo List</h1>
-  <h2>For when you just need to get stuff done and keep track of it</h2>
-  <p>Enter items here:</p>
-  <input id='inputfield' type='text' placeholder='Enter and item here'>
-  <button id='inputbutton'>Enter</button>
-  <p>Todo List: (click on the list items to remove them)</p>
-  <ul id='masterlist'></ul>
+  <div class="container">
+    <div class="title-and-input">
+      <h1>Nick's Simple JavaScript Todo List</h1>
+      <h2>For when you just need to get stuff done and keep track of it</h2>
+      <p>Enter items here:</p>
+      <div>
+        <input id='inputfield' type='text' placeholder='Enter and item here'>
+        <button id='inputbutton'>Enter</button>
+      </div>
+    </div>
+    <div class="todo-list">
+      <p>Todo List: (click on the list items to remove them)</p>
+      <ul id='masterlist'></ul>
+    </div>
+  </div>
   <script src='script.js'></script>
 </body>
 </html>

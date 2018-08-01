@@ -1,6 +1,6 @@
-let inputButton = document.getElementById('inputbutton');
-let inputField = document.getElementById('inputfield');
-let todoList = document.getElementById('masterlist');
+const inputButton = document.getElementById('inputbutton');
+const inputField = document.getElementById('inputfield');
+const todoList = document.getElementById('masterlist');
 
 /*
   As this gets more complex, I will add additional comments, but for now

@@ -1,5 +1,5 @@
-const inputButton = document.getElementById('inputbutton');
-const inputField = document.getElementById('inputfield');
+const button = document.getElementById('inputbutton');
+const field = document.getElementById('inputfield');
 const todoList = document.getElementById('masterlist');
 
 /*
@@ -7,32 +7,32 @@ const todoList = document.getElementById('masterlist');
   the functions and code are self-commenting and should be easy to follow
 */
 
-function removeThisElement() {
+function removeEl() {
   // At the moment, I don't know a better/simpler way of removing elements than this
   this.parentNode.removeChild(this);
 }
 
-function addInputToList() {
+function addToList() {
   let node = document.createElement('li');
-  let textNode = document.createTextNode(inputField.value);
+  let textNode = document.createTextNode(field.value);
   node.appendChild(textNode);
   todoList.appendChild(node);
-  node.addEventListener('click', removeThisElement);
+  node.addEventListener('click', removeEl);
 }
 
-function sendUserInput() {
-  if (inputField.value.length > 0) {
-    addInputToList();
-    inputField.value = '';
+function sendInput() {
+  if (field.value.length > 0) {
+    addToList();
+    field.value = '';
   }
 }
 
-function checkIfValidKey(e) {
+function checkKey(e) {
   // keyCode 13 is the Enter key
-  if (inputField.value.length > 0 && e.keyCode === 13) {
-    sendUserInput();
+  if (field.value.length > 0 && e.keyCode === 13) {
+    sendInput();
   }
 }
 
-inputButton.addEventListener('click', sendUserInput);
-inputField.addEventListener('keypress', checkIfValidKey);
+button.addEventListener('click', sendInput);
+field.addEventListener('keypress', checkKey);

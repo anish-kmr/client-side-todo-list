@@ -4,19 +4,27 @@ set the box-sizing to border-box, so that I don't have to do the additional math
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-image: url("../img/background-photo.jpg");
+  background-size: cover;
 }
 
 /* flexbox layout start */
+
 .container {
   display: flex;
   margin: 1% 1%;
+  justify-content: center;
 }
-.title-and-input, .todo-list {
-  flex: 1;
+
+.title-and-input {
   display: flex;
   flex-direction: column;
 }
+
 li {
   margin-left: 20px;
 }

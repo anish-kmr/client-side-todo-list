@@ -7,8 +7,9 @@ const todoList = document.getElementById('masterlist');
   the functions and code are self-commenting and should be easy to follow
 */
 
+// I can't turn this function declaration into an arrow function, because
+// the arrow functions cant use the 'this' keyword
 function removeEl() {
-  // At the moment, I don't know a better/simpler way of removing elements than this
   this.parentNode.removeChild(this);
 }
 

@@ -14,8 +14,8 @@ function removeEl() {
 }
 
 function addToList() {
-  let node = document.createElement('li');
-  let textNode = document.createTextNode(field.value);
+  const node = document.createElement('li');
+  const textNode = document.createTextNode(field.value);
   node.appendChild(textNode);
   todoList.appendChild(node);
   node.addEventListener('click', removeEl);

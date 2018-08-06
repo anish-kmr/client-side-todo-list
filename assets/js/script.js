@@ -21,6 +21,7 @@ function addToList() {
   node.addEventListener('click', removeEl);
 }
 
+// checks to see if the input has a non-empty value in it before adding to the list
 function sendInput() {
   if (field.value.length > 0) {
     addToList();

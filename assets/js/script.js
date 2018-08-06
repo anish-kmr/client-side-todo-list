@@ -25,7 +25,7 @@ function addToList() {
 function sendInput() {
   if (field.value.length > 0) {
     addToList();
-    field.value = '';
+    field.value = ''; // clears the input field after adding the input to the list
   }
 }
 

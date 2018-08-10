@@ -1,4 +1,5 @@
 // Todo: add unit testing so that when I add more features, I don't have to test everything each time
+// Todo: add a button that adds a class with the strike-through property for the text, without deleting it
 
 // sets shorter names to select specific elements in the page
 const inputButton = document.getElementById('inputbutton');
@@ -13,7 +14,7 @@ const removeEl = (event) => {
 // adds a delete button that, when clicked, deletes the li element and the new button
 const addDelButton = (li) => {
   const button = document.createElement('button');
-  const buttonText = document.createTextNode('delete');
+  const buttonText = document.createTextNode('Delete');
   button.appendChild(buttonText);
   li.appendChild(button);
   button.addEventListener('click', removeEl);

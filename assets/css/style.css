@@ -25,6 +25,22 @@ body {
   flex-direction: column;
 }
 
+button {
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 2px;
+}
+
 li {
   margin-left: 20px;
+  margin-top: 5px;
+}
+
+li button {
+  background-color: rgb(244, 74, 17);
+  margin-left: 4px;
+}
+
+.blue-button {
+  background-color: rgb(171, 242, 246);
 }

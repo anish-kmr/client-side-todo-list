@@ -37,8 +37,8 @@ const sendInput = () => {
 }
 
 // checks that there's a value in the input and that the enter key was pressed
-const checkKey = (e) => {
-  if (inputField.value.length > 0 && e.keyCode === 13) {
+const checkKey = (event) => {
+  if (inputField.value.length > 0 && event.keyCode === 13) {
     sendInput();
   }
 }

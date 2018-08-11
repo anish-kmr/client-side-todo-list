@@ -12,25 +12,6 @@ body {
   background-size: cover;
 }
 
-/* flexbox layout start */
-
-.container {
-  display: flex;
-  margin: 1% 1%;
-  justify-content: center;
-}
-
-.title-and-input {
-  display: flex;
-  flex-direction: column;
-}
-
-button {
-  border-radius: 4px;
-  font-weight: bold;
-  padding: 2px;
-}
-
 li {
   margin-left: 20px;
   margin-top: 5px;
@@ -43,4 +24,23 @@ li button {
 
 .blue-button {
   background-color: rgb(171, 242, 246);
+}
+
+button {
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 2px;
+}
+
+/* flexbox layout start */
+
+.container {
+  display: flex;
+  margin: 1% 1%;
+  justify-content: center;
+}
+
+.title-and-input {
+  display: flex;
+  flex-direction: column;
 }

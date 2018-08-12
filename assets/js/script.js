@@ -1,5 +1,7 @@
-// Todo: add unit testing so that when I add more features, I don't have to test everything each time
-// Todo: add a button that adds a class with the strike-through property for the text, without deleting it
+// Todo: add unit testing so that when I add more features,
+// I don't have to test everything each time
+// Todo: add a button that adds a class with the strike-through
+// property for the text, without deleting it
 
 // sets shorter names to select specific elements in the page
 const inputButton = document.getElementById('inputbutton');
@@ -9,7 +11,7 @@ const todoList = document.getElementById('todo-list');
 // removes the parent node of the current event
 const removeEl = (event) => {
   event.currentTarget.parentNode.remove();
-}
+};
 
 // adds a delete button that, when clicked, deletes the li element and the new button
 const addDelButton = (li) => {
@@ -18,7 +20,7 @@ const addDelButton = (li) => {
   button.appendChild(buttonText);
   li.appendChild(button);
   button.addEventListener('click', removeEl);
-}
+};
 
 // adds the new input to the list as a list item
 const addToList = () => {
@@ -27,7 +29,7 @@ const addToList = () => {
   li.appendChild(liText);
   addDelButton(li); // adds a delete button alongside the new li element
   todoList.appendChild(li);
-}
+};
 
 // checks to see if the input has a non-empty value in it before adding to the list
 const sendInput = () => {
@@ -35,14 +37,14 @@ const sendInput = () => {
     addToList();
     inputField.value = ''; // clears the input field after adding the input to the list
   }
-}
+};
 
 // checks that there's a value in the input and that the enter key was pressed
 const checkKey = (event) => {
   if (inputField.value.length > 0 && event.keyCode === 13) {
     sendInput();
   }
-}
+};
 
 // adds event listeners to the button and field to watch for user input
 inputButton.addEventListener('click', sendInput);

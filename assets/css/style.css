@@ -12,6 +12,10 @@ body {
   background-size: cover;
 }
 
+.input {
+  margin: 20px 0px;
+}
+
 li {
   margin-left: 20px;
   margin-top: 5px;

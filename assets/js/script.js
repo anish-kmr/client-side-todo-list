@@ -1,7 +1,8 @@
-// Todo: add unit testing so that when I add more features,
-// I don't have to test everything each time
-// Todo: add a button that adds a class with the strike-through
-// property for the text, without deleting it
+/* Todo: add unit testing so that when I add more features,
+   I don't have to test everything each time
+   Todo: add a button that adds a class with the strike-through
+   property for the text, without deleting it
+*/
 
 // sets shorter names to select specific elements in the page
 const inputButton = document.getElementById('inputbutton');

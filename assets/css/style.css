@@ -17,6 +17,7 @@ body {
 }
 
 li {
+  list-style-type: none;
   margin-left: 20px;
   margin-top: 5px;
 }
@@ -47,4 +48,12 @@ button {
 .title-and-input {
   display: flex;
   flex-direction: column;
+}
+
+/*Class for the struck of text that has been marked completed
+  also changes the text color to grey*/
+
+.completed {
+    text-decoration: line-through;
+    color: #888888
 }

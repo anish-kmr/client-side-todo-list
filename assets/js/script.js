@@ -47,7 +47,7 @@ const addDelButton = (li) => {
 const addToList = () => {
   const li = document.createElement('li');
   const liText = document.createTextNode(inputField.value);
-  addCheckbox(li); //adds a completed button alongside the new li element
+  addCheckbox(li); //adds a checkbox before the text in the new li element
   li.appendChild(liText);
   addDelButton(li); // adds a delete button alongside the new li element
   todoList.appendChild(li);

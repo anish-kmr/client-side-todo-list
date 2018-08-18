@@ -9,6 +9,27 @@ const inputButton = document.getElementById('inputbutton');
 const inputField = document.getElementById('inputfield');
 const todoList = document.getElementById('todo-list');
 
+
+/*Function to mark the task as completed, sets the class completed from 
+  the css file*/
+const markCompleted = (event) => {
+    const checkbox = event.currentTarget;
+    if(checkbox.checked == true) {
+      checkbox.parentElement.classList.add('completed');
+    } 
+    else {
+      checkbox.parentElement.classList.remove('completed');
+    }
+};
+
+//adds checkbox to the list
+const addCheckbox = (li) => {
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.onchange = markCompleted;
+  li.appendChild(checkbox);
+};
+
 // removes the parent node of the current event
 const removeEl = (event) => {
   event.currentTarget.parentNode.remove();
@@ -27,6 +48,7 @@ const addDelButton = (li) => {
 const addToList = () => {
   const li = document.createElement('li');
   const liText = document.createTextNode(inputField.value);
+  addCheckbox(li); //adds a checkbox before the text in the new li element
   li.appendChild(liText);
   addDelButton(li); // adds a delete button alongside the new li element
   todoList.appendChild(li);

@@ -1,7 +1,8 @@
-/* Todo: add unit testing so that when I add more features,
-   I don't have to test everything each time
-   Todo: add a button that adds a class with the strike-through
-   property for the text, without deleting it
+/*
+  Todo: add unit testing so that when I add more features,
+  I don't have to test everything each time
+  Todo: add a button that adds a class with the strike-through
+  property for the text, without deleting it
 */
 
 // sets shorter names to select specific elements in the page
@@ -10,19 +11,20 @@ const inputField = document.getElementById('inputfield');
 const todoList = document.getElementById('todo-list');
 
 
-/*Function to mark the task as completed, sets the class completed from 
-  the css file*/
+/*
+  Function to mark the task as completed, sets the class completed from
+  the css file
+*/
 const markCompleted = (event) => {
-    const checkbox = event.currentTarget;
-    if(checkbox.checked == true) {
-      checkbox.parentElement.classList.add('completed');
-    } 
-    else {
-      checkbox.parentElement.classList.remove('completed');
-    }
+  const checkbox = event.currentTarget;
+  if (checkbox.checked === true) {
+    checkbox.parentElement.classList.add('completed');
+  } else {
+    checkbox.parentElement.classList.remove('completed');
+  }
 };
 
-//adds checkbox to the list
+// adds checkbox to the list
 const addCheckbox = (li) => {
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
@@ -48,7 +50,7 @@ const addDelButton = (li) => {
 const addToList = () => {
   const li = document.createElement('li');
   const liText = document.createTextNode(inputField.value);
-  addCheckbox(li); //adds a checkbox before the text in the new li element
+  addCheckbox(li); // adds a checkbox before the text in the new li element
   li.appendChild(liText);
   addDelButton(li); // adds a delete button alongside the new li element
   todoList.appendChild(li);
